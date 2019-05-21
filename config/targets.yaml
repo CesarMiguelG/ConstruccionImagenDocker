@@ -1,0 +1,19 @@
+Targets:
+  PXBoardQP4G:
+    Name: PXBoardQP4G
+    TargetImage: assets/images/PXBoardQP4G-latest.img
+    SkipUpdate: False
+    Assets:
+      BaseImage:
+        path: assets/images/PixieQP4GCoreImage-2018-11-13.img
+        url: https://code-ing.com/pixierepo/release/images/latest/PixieQP4GCoreImage.zip
+
+BuildCommand:
+  cmd: helper_scripts/build_img.sh
+  params:
+    - BaseImage
+    - TargetImage
+    - U-Boot
+    - RootFS
+    - Packages
+    - Scripts
